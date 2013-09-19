@@ -15,3 +15,15 @@ E:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.Form1.resources
 E:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.Properties.Resources.resources
 E:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.exe
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.pdb
+D:\Jogo_Velha\Jogo_Velha\bin\Debug\Jogo_Velha.exe
+D:\Jogo_Velha\Jogo_Velha\bin\Debug\Jogo_Velha.pdb
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.Form1.resources
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.Properties.Resources.resources
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.Principal.resources
+F:\JogoAtual\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.exe
+F:\JogoAtual\Jogo_Velha\Jogo_Velha\obj\x86\Debug\Jogo_Velha.pdb

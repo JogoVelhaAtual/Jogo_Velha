@@ -20,6 +20,7 @@ namespace Jogo_Velha
         int ganhador1=0;
         int ganhador2=0;
         int emapates = 0;
+       
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,37 +55,58 @@ namespace Jogo_Velha
 
         private void VerificarGanhador()
         {
-            if (
-                    b11.Text != String.Empty && b11.Text == b12.Text && b12.Text == b13.Text ||
-                    b21.Text != String.Empty && b21.Text == b22.Text && b22.Text == b23.Text ||
-                    b31.Text != String.Empty && b31.Text == b32.Text && b32.Text == b33.Text ||
+            
+                  if(  b11.Text != String.Empty && b11.Text == b12.Text && b12.Text == b13.Text)
+                  {
+                      b11.BackColor = Color.Coral; b12.BackColor = Color.Coral; b13.BackColor = Color.Coral;
+                      Pontuar();
+                  }
 
-                    b11.Text != String.Empty && b11.Text == b21.Text && b21.Text == b31.Text ||
-                    b12.Text != String.Empty && b12.Text == b22.Text && b22.Text == b32.Text ||
-                    b13.Text != String.Empty && b13.Text == b23.Text && b23.Text == b33.Text ||
+                  else   if (b21.Text != String.Empty && b21.Text == b22.Text && b22.Text == b23.Text)
+                    {
+                      b21.BackColor = Color.Coral; b22.BackColor = Color.Coral; b23.BackColor = Color.Coral;
+                      Pontuar();
+                    }
+                  else   if(b31.Text != String.Empty && b31.Text == b32.Text && b32.Text == b33.Text) 
+                    {
+                      b31.BackColor = Color.Coral; b32.BackColor = Color.Coral; b33.BackColor = Color.Coral;
+                      Pontuar();
+                    }
 
-                    b11.Text != String.Empty && b11.Text == b22.Text && b22.Text == b33.Text ||
-                    b13.Text != String.Empty && b13.Text == b22.Text && b22.Text == b31.Text
-                )
-            {
-                if (xis == true)
-                {
-                    textBox1.Text = ganhador1.ToString() + 1;
+                  else  if( b11.Text != String.Empty && b11.Text == b21.Text && b21.Text == b31.Text) 
+                     {
+                      b11.BackColor = Color.Coral; b21.BackColor = Color.Coral; b31.BackColor = Color.Coral;
+                      Pontuar();
+                     }
+                   else  if(b12.Text != String.Empty && b12.Text == b22.Text && b22.Text == b32.Text)
+                     {
+                      b12.BackColor = Color.Coral; b22.BackColor = Color.Coral; b32.BackColor = Color.Coral;
+                      Pontuar();
+                     }
+                    else  if(b13.Text != String.Empty && b13.Text == b23.Text && b23.Text == b33.Text) 
+                     {
+                      b13.BackColor = Color.Coral; b23.BackColor = Color.Coral; b33.BackColor = Color.Coral;
+                      Pontuar();
+                     }
 
-                }
-                else
-                {
-                    textBox2.Text = ganhador2.ToString() + 1;
-                }
-                MessageBox.Show(String.Format("O ganhador é o [{0}]", xis ? "X" : "O"), "Temos um vencedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                Reiniciar();
-
-            }
-            else
-            {
-                VerificarEmpate();
-            }
+                    else if(b11.Text != String.Empty && b11.Text == b22.Text && b22.Text == b33.Text) 
+                     {
+                         b11.BackColor = Color.Coral; b22.BackColor = Color.Coral; b33.BackColor = Color.Coral;
+                         Pontuar();
+                    }
+                       
+                    else if(b13.Text != String.Empty && b13.Text == b22.Text && b22.Text == b31.Text)
+                    {
+                        b13.BackColor = Color.Coral; b22.BackColor = Color.Coral; b31.BackColor = Color.Coral;
+                        Pontuar();
+                    }
+                    
+                    else
+                    {
+                
+                        VerificarEmpate();
+                    }
+            
         }
 
         private void VerificarEmpate()
@@ -108,12 +130,27 @@ namespace Jogo_Velha
             }
         }
 
+        private void Pontuar()
+        {
+            if (xis == true)
+            {
+                textBox1.Text = (ganhador1 += 1).ToString();
+
+            }
+            else
+            {
+                textBox2.Text = (ganhador2 += 1).ToString();
+            }
+            MessageBox.Show(String.Format("O ganhador é o [{0}]", xis ? "X" : "O"), "Temos um vencedor", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            Reiniciar();
+        }
         private void Reiniciar()
         {
             foreach (Control item in this.Controls)
             {
                 if (item is Button)
                 {
+                    item.BackColor = Color.White;
                     item.Enabled = true;
                     item.Text = String.Empty;
                 }
